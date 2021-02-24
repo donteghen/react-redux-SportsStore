@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   return (
