@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 export class ProductList extends Component {
 render() {
+    
     if (this.props.products == null || this.props.products.length === 0) {
         return <h5 className="p-2">No Products</h5>
     }
@@ -11,7 +12,9 @@ render() {
                 ${ p.price.toFixed(2) }
                 </span>
             </h4>
-            <div className="card-text bg-white p-1">{ p.description }</div>
+            <div className="card-text bg-white p-1">{ p.description }
+            <button className="btn btn-primary btn-sm float-right" onClick={ () => this.props.addToCart(p)}>Addt to Card</button>
+            </div>
         </div>
     )
     }
